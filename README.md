@@ -6,6 +6,9 @@ Due to limited camera capacities, digital images usually have a narrower dynamic
 
 [Paper link (Axriv)](https://arxiv.org/abs/2307.16426)
 
+## Contributions
+If you have any questions, feel free to e-mail the author Jiaqi Tang ([jtang092@connect.ust.hk](jtang092@connect.ust.hk)).
+
 ## Dataset
 
 TODO
@@ -27,10 +30,12 @@ TODO
 If you find the project useful, please cite:
 
 ```
-@inproceedings{xu2022scene2graph,
-  title={Hierarchical Image Generation via Transformer-Based Sequential Patch Selection},
-  author={Xiaogang Xu, Ning Xu},
-  booktitle={AAAI},
-  year={2022}
+@misc{tang2023high,
+      title={High Dynamic Range Image Reconstruction via Deep Explicit Polynomial Curve Estimation}, 
+      author={Jiaqi Tang and Xiaogang Xu and Sixing Hu and Ying-Cong Chen},
+      year={2023},
+      eprint={2307.16426},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
 }
 ```
