@@ -1,4 +1,4 @@
-# EPCE-HDR (ECAI 2023 oral) 
+# EPCE-HDR (ECAI 2023 Oral) 
 This is a pytorch project for the paper **High Dynamic Range Image Reconstruction via Deep Explicit Polynomial Curve Estimation** 
 
 by Jiaqi Tang, Xiaogang Xu, Sixing Hu and Ying-Cong Chen presented at **ECAI2023**.
