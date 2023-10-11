@@ -12,7 +12,7 @@ Due to limited camera capacities, digital images usually have a narrower dynamic
 
 [Poster](ECAI_Poster.pdf)
 
-[Oral (PPT)]()
+[Oral (PPT)](1024HighDynamicRange.pdf)
 
 [Oral (Video)]()
 
