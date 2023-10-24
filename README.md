@@ -40,7 +40,7 @@ TODO
 If you find the project useful, please cite:
 
 ```
-@inproceedings{DBLP:conf/ecai/TangXHC23,
+@inproceedings{TangXHC23,
   author       = {Jiaqi Tang and
                   Xiaogang Xu and
                   Sixing Hu and
@@ -62,9 +62,6 @@ If you find the project useful, please cite:
   publisher    = {{IOS} Press},
   year         = {2023},
   url          = {https://doi.org/10.3233/FAIA230533},
-  doi          = {10.3233/FAIA230533},
-  timestamp    = {Wed, 18 Oct 2023 09:31:16 +0200},
-  biburl       = {https://dblp.org/rec/conf/ecai/TangXHC23.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+  doi          = {10.3233/FAIA230533}
 }
 ```
