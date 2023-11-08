@@ -40,28 +40,11 @@ TODO
 If you find the project useful, please cite:
 
 ```
-@inproceedings{TangXHC23,
-  author       = {Jiaqi Tang and
-                  Xiaogang Xu and
-                  Sixing Hu and
-                  Ying{-}Cong Chen},
-  editor       = {Kobi Gal and
-                  Ann Now{\'{e}} and
-                  Grzegorz J. Nalepa and
-                  Roy Fairstein and
-                  Roxana Radulescu},
-  title        = {High Dynamic Range Image Reconstruction via Deep Explicit Polynomial
-                  Curve Estimation},
-  booktitle    = {{ECAI} 2023 - 26th European Conference on Artificial Intelligence,
-                  September 30 - October 4, 2023, Krak{\'{o}}w, Poland - Including
-                  12th Conference on Prestigious Applications of Intelligent Systems
-                  {(PAIS} 2023)},
-  series       = {Frontiers in Artificial Intelligence and Applications},
-  volume       = {372},
-  pages        = {2330--2337},
-  publisher    = {{IOS} Press},
-  year         = {2023},
-  url          = {https://doi.org/10.3233/FAIA230533},
-  doi          = {10.3233/FAIA230533}
+@inproceedings{Tang2023HighDR,
+  title={High Dynamic Range Image Reconstruction via Deep Explicit Polynomial Curve Estimation},
+  author={Jiaqi Tang and Xiaogang Xu and Sixing Hu and Yingke Chen},
+  booktitle={European Conference on Artificial Intelligence},
+  year={2023},
+  url={https://api.semanticscholar.org/CorpusID:260334575}
 }
 ```
