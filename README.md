@@ -99,11 +99,15 @@ to visualize the images.
 ### Evaluation
 
 - In addition to the recognized evaluation metrics (PSNR, SSIM etc.), we also introduce AvgPSNR as an evaluation metric. AvgPSNR is a metric that can jointly assess the PSNR values of HDR images before and after tone mapping. It is defined as,
-$$ AvgPSNR = 0.7*PSNR + 0.3 * \mu-PSNR $$
+
+AvgPSNR = 0.7*PSNR + 0.3 * mu-PSNR
 
 ![image](./fig/qe.svg)
 
 
+- Testing in the wild
+
+![image](./fig/wild.png)
 
 ## Citation Information
 
