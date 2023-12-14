@@ -32,7 +32,7 @@ Due to different physical imaging parameters, the tone-mapping functions between
 https://competitions.codalab.org/competitions/28161#participate-get-data
 ```
 
-- [TODO] Or download it directly from Drive (Recommend):
+- Or download it directly from Drive (Recommend):
 [Google Drive](https://drive.google.com/file/d/1VM_WdQTnyW4pzKM88BeCi08Hc0meOkuu/view?usp=sharing). (including code for building dataset)
 
 ### Environment
