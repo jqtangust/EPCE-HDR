@@ -116,9 +116,22 @@ If you find the project useful, please cite:
 ```
 @inproceedings{Tang2023HighDR,
   title={High Dynamic Range Image Reconstruction via Deep Explicit Polynomial Curve Estimation},
+<<<<<<< HEAD
   author={Jiaqi Tang and Xiaogang Xu and Sixing Hu and Ying-Cong Chen},
   booktitle={European Conference on Artificial Intelligence},
   year={2023}
+=======
+<<<<<<< HEAD
+  author={Jiaqi Tang and Xiaogang Xu and Sixing Hu and Ying-Cong Chen},
+  booktitle={European Conference on Artificial Intelligence},
+  year={2023}
+=======
+  author={Jiaqi Tang and Xiaogang Xu and Sixing Hu and Yingke Chen},
+  booktitle={European Conference on Artificial Intelligence},
+  year={2023},
+  url={https://api.semanticscholar.org/CorpusID:260334575}
+>>>>>>> 12b9660e6c649e58010a2dfee19292e7d72329e6
+>>>>>>> f57e8fa10afc1b95db2330ebc3f1a954b21b0623
 }
 ```
 
