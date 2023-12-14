@@ -62,7 +62,7 @@ codes
 
 #### How to test
 
-- Modify `dataroot_LQ` and `pretrain_model_G` for low range image and model, then run
+- Modify `dataroot_LQ` and `pretrain_model_G` for low dynamic range image and model, then run
 
 ```
 cd codes
@@ -99,7 +99,9 @@ to visualize the images.
 
 - In addition to the recognized evaluation metrics (PSNR, SSIM etc.), we also introduce AvgPSNR as an evaluation metric. AvgPSNR is a metric that can jointly assess the PSNR values of HDR images before and after tone mapping. It is defined as,
 
+```
 AvgPSNR = 0.7*PSNR + 0.3 * mu-PSNR
+```
 
 ![image](./fig/qe.svg)
 
