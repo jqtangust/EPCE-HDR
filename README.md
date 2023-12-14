@@ -22,7 +22,7 @@ Due to different physical imaging parameters, the tone-mapping functions between
 2. [Environment](#environment)
 3. [Configuration](#config)
 4. [Usage](#usage)
-5. [Visualization](#visualization)
+5. [Evaluation](#Evaluation)
 
 ### Multi TM Curves Dataset
 
