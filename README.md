@@ -123,4 +123,4 @@ If you find the project useful, please cite:
 
 ## Contributions
 
-If you have any questions, feel free to e-mail the author Jiaqi Tang ([jtang092@connect.ust.hk](jtang092@connect.ust.hk)). Besides, these codes are built on ](https://github.com/chxy95).
+If you have any questions, feel free to e-mail the author Jiaqi Tang ([jtang092@connect.ust.hk](jtang092@connect.ust.hk)). Besides, these codes are built on [HDRUNET](https://github.com/chxy95).
