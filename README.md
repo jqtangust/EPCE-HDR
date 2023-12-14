@@ -33,8 +33,7 @@ https://competitions.codalab.org/competitions/28161#participate-get-data
 ```
 
 - [TODO] Or download it directly from Drive (Recommend):
-[Google Drive](https://arxiv.org/abs/2307.16426) |
-[Baidu Drive](https://arxiv.org/abs/2307.16426).
+[Google Drive](https://arxiv.org/abs/2307.16426).
 
 ### Environment
 ```
