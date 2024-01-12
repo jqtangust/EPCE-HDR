@@ -1,7 +1,7 @@
 import torch
 import logging
 
-from models.epce_model.EPCE import Curve_Estimation
+from models.epce_model.EPCE import PPVisionTransformer
 
 logger = logging.getLogger('base')
 input = torch.Tensor(1,3,256,256)
@@ -15,7 +15,7 @@ def define_G(opt,tb_logger):
     which_model = opt_net['which_model_G']
 
     if which_model == 'EPCE':
-        netG = Curve_Estimation()
+        netG = PPVisionTransformer()
     else:
         raise NotImplementedError('Generator model [{:s}] not recognized'.format(which_model))
     return netG
