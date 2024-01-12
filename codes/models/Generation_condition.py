@@ -34,7 +34,6 @@ class GenerationModel(BaseModel):
             self.netG = DataParallel(self.netG)
         # print network
         # self.print_network()
-        self.middlemap = 0;
         self.load()
 
         if self.is_train:
@@ -101,7 +100,7 @@ class GenerationModel(BaseModel):
 
     def optimize_parameters(self, step):
         self.optimizer_G.zero_grad()
-        self.fake_H,self.middlemap = self.netG(self.var_L)
+        self.fake_H = self.netG(self.var_L)
 
         l_pix = self.l_pix_w * self.cri_pix(self.fake_H, self.real_H)
         l_pix.backward()
@@ -113,19 +112,9 @@ class GenerationModel(BaseModel):
     def test(self):
         self.netG.eval()
         with torch.no_grad():
-            self.fake_H,self.middlemap = self.netG(self.var_L)
-            # print(self.middlemap)
-            # print(self.middlemap.shape)
-            #self.tb_logger.add_image('channels', make_grid(self.middlemap[0].detach().cpu().unsqueeze(dim=1), nrow=5, padding=20, normalize=False, pad_value=1), self.step)
+            self.fake_H = self.netG(self.var_L)
             self.step+=1
-            # for i in range(len(self.middlemap)):
-            #     print(self.middlemap[i].shape)
-            #     self.middlemap[i]=self.middlemap[i].cpu()
-            #     self.middlemap[i]=make_grid(self.middlemap[i])   #concat the images 
-            #     print(self.middlemap[i].shape)
-
-            #     self.tb_logger.add_image('step'+str(i),self.middlemap[i])  #add image to tensorboard 
-
+            
         self.netG.train()
 
     def get_current_log(self):
