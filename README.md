@@ -19,6 +19,7 @@ Due to different physical imaging parameters, the tone-mapping functions between
 
 - ✅ Fix some bugs in codes.
 - ✅ Fix the problem in datasets. Check this Google Cloud link for [DOWNLOAD](https://drive.google.com/file/d/13Cn7tX5bFBxsYZG1Haw5VcqhSxWnNzMW/view?usp=sharing).
+- ✅ Release Pretrained Model. Check this Google Cloud link for [DOWNLOAD](https://drive.google.com/file/d/1C1w11zE7sB3PGHpMySfz4476hcnNZ7Pe/view?usp=sharing).
 
 ## Getting Started
 
