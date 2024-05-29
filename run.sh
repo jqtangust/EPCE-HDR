@@ -1,0 +1,1 @@
+nohup python ./codes/train.py -opt /remote-home/share/jiaqi2/HDR/EPCE-HDR/codes/options/train/train.yml

@@ -1,0 +1,9 @@
+numpy
+torch
+opencv_contrib_python
+yaml
+tensorboard
+lmdb
+scipy
+timm
+einops

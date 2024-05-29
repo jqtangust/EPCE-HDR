@@ -1,0 +1,69 @@
+#### general settings
+name: EPCE-HDR-1e-6
+model: condition
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [4,5,6,7]
+
+#### datasets
+datasets:
+  train:
+    name: Single_LDR2HDR
+    mode: LQGT_condition_Val
+    dataroot_LQ: /remote-home/share/jiaqi2/HDR/MultiTMCurvesDataset/LDR/Train_mu
+    dataroot_GT: /remote-home/share/jiaqi2/HDR/MultiTMCurvesDataset/HDR/Train
+    dataroot_ratio: /remote-home/share/jiaqi2/HDR/MultiTMCurvesDataset/alignratio/alignratio_Train
+    use_shuffle: true
+    n_workers: 8
+    batch_size: 4
+    GT_size: 256
+    use_flip: true
+    use_rot: true
+    condition: image
+  val:
+    name: Single_LDR2HDR
+    mode: LQGT_condition_Val
+    dataroot_LQ: /remote-home/share/jiaqi2/HDR/MultiTMCurvesDataset/LDR/Val_testgamma
+    dataroot_GT: /remote-home/share/jiaqi2/HDR/MultiTMCurvesDataset/HDR/Val
+    dataroot_ratio: /remote-home/share/jiaqi2/HDR/MultiTMCurvesDataset/alignratio/alignratio_Val
+    condition: image
+
+#### network structures
+network_G:
+  which_model_G: EPCE
+  in_nc: 3
+  out_nc: 3
+  nf: 64
+  act_type: relu
+
+#### path
+path:
+  root: ./
+  # pretrain_model_G: /home/jiaqitang/HDR_all/Final_Ours/experiments/Final_Ours-Original_archived_230627-142133/models/10000_G.pth
+  strict_load: false
+  # resume_state: /home/jiaqitang/HDR_all/Final_Ours/experiments/Final_Ours-Original/training_state/30000.state
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 1e-6
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 800000 # 600000
+  warmup_iter: -1  # no warm up
+
+  lr_steps: [200000, 400000, 600000, 800000]
+  lr_gamma: 0.5
+
+  pixel_criterion: tanh_l1
+  # l1 | l2 | tanh_l1 | tanh_l2 / tanh_l1_Entropy
+  pixel_weight: 1.0
+
+  manual_seed: 20
+  val_freq: !!float 500
+
+#### logger
+logger:
+  print_freq: 10
+  save_checkpoint_freq: !!float 500
