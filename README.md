@@ -15,6 +15,10 @@ Due to different physical imaging parameters, the tone-mapping functions between
 
 ![image](./fig/moti.svg)
 
+## Updates
+
+- ✅ Fix some problems in codes.
+- ✅ Fix problems in datasets. Check this Google Cloud link for [DOWNLOAD](https://drive.google.com/file/d/13Cn7tX5bFBxsYZG1Haw5VcqhSxWnNzMW/view?usp=sharing).
 
 ## Getting Started
 
@@ -33,7 +37,7 @@ https://competitions.codalab.org/competitions/28161#participate-get-data
 ```
 
 - Or download it directly from Drive (Recommend):
-[Google Drive](https://drive.google.com/file/d/1VM_WdQTnyW4pzKM88BeCi08Hc0meOkuu/view?usp=sharing). (including code for building dataset)
+[Google Drive](https://drive.google.com/file/d/13Cn7tX5bFBxsYZG1Haw5VcqhSxWnNzMW/view?usp=sharing). (including code for building dataset)
 
 ### Environment
 ```
