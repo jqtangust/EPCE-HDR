@@ -8,7 +8,11 @@ datasets:
   test_1:  # the 1st test dataset
     name: 000_Valid_SingleFrame_FirstStage
     mode: LQ_condition
+<<<<<<< HEAD
     dataroot_LQ: /remote-home/share/jiaqi2/HDR/home/jiaqitang/Real_Valset_1024/image_gamma
+=======
+    dataroot_LQ: /home/jiaqitang/Real_Valset_1024/image_gamma
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
     condition: image
     
 #### network structures
@@ -22,5 +26,9 @@ network_G:
 #### path
 path:
   root: ./
+<<<<<<< HEAD
   pretrain_model_G: /remote-home/share/jiaqi2/HDR/home/jiaqitang/Final_Ours/weight/240000_G.pth
+=======
+  pretrain_model_G: /home/jiaqitang/Final_Ours/weight/240000_G.pth
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 

@@ -334,7 +334,11 @@ class PPVisionTransformer(nn.Module):
 
         out_right = self.output(image)
 
+<<<<<<< HEAD
         output = self.curve_estimation(x, out_right)
+=======
+        output = self.curve_estimation(x,out_right)
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 
         return output
 

@@ -57,7 +57,11 @@ def main():
     #### options
     parser = argparse.ArgumentParser()
     parser.add_argument(
+<<<<<<< HEAD
         '-opt', type=str, help='Path to option YMAL file.', default='/remote-home/share/jiaqi2/HDR/EPCE-HDR/codes/options/train/train.yml')
+=======
+        '-opt', type=str, help='Path to option YMAL file.', default='/home/jiaqitang/Fullset-HDR-Mutlipixelformer-Former/codes/options/train/train_HDRUNet.yml')
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
     parser.add_argument('--launcher', choices=['none', 'pytorch'], default='none',
                         help='job launcher')
     parser.add_argument('--local_rank', type=int, default=0)
@@ -229,23 +233,37 @@ def main():
 
                     visuals = model.get_current_visuals()
 
+<<<<<<< HEAD
                     sr_img = util.tensor2numpy(visuals['SR']) # float32 
+=======
+                    sr_img = util.tensor2numpy(visuals['SR']) # float32
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
                     gt_img = util.tensor2numpy(visuals['GT']) # float32
 
                     # calculate PSNR
                     avg_psnr += util.calculate_psnr(sr_img, gt_img)
+<<<<<<< HEAD
                     # avg_normalized_psnr += util.calculate_normalized_psnr(sr_img, gt_img, np.max(gt_img))
                     # avg_tonemapped_psnr += util.calculate_tonemapped_psnr(sr_img, gt_img, percentile=99, gamma=2.24)
 
                     # calculate Entropy
                     #print(sr_img.shape)
                     # ent=0
+=======
+                    avg_normalized_psnr += util.calculate_normalized_psnr(sr_img, gt_img, np.max(gt_img))
+                    avg_tonemapped_psnr += util.calculate_tonemapped_psnr(sr_img, gt_img, percentile=99, gamma=2.24)
+
+                    # calculate Entropy
+                    #print(sr_img.shape)
+                    ent=0
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 
                     x_image = cv2.cvtColor(sr_img, cv2.COLOR_BGR2GRAY)
                     #print(x_image.shape)
                     x_image = x_image * 65536
                     #print(x_image)
                     x_image = x_image.astype(np.int16)
+<<<<<<< HEAD
                     # ent += get_entropy(x_image)
                     
                     # avg_Entropy = ent
@@ -268,6 +286,31 @@ def main():
                     # tb_logger.add_scalar('norm_PSNR', avg_normalized_psnr, current_step)
                     # tb_logger.add_scalar('mu_PSNR', avg_tonemapped_psnr, current_step)
                     # tb_logger.add_scalar('Entropy', avg_Entropy, current_step)
+=======
+                    ent += get_entropy(x_image)
+                    
+                    avg_Entropy += ent
+                    
+                    
+                avg_psnr = avg_psnr / idx
+                avg_normalized_psnr = avg_normalized_psnr / idx
+                avg_tonemapped_psnr = avg_tonemapped_psnr / idx
+                avg_Entropy = avg_Entropy / idx
+                print("avg_Entropy:",avg_Entropy)
+
+                # log
+                logger.info('# Validation # PSNR: {:.4e}, norm_PSNR: {:.4e}, mu_PSNR: {:.4e}'.format(avg_psnr, avg_normalized_psnr, avg_tonemapped_psnr))
+                logger_val = logging.getLogger('val')  # validation logger
+                logger_val.info('<epoch:{:3d}, iter:{:8,d}> psnr: {:.4e} norm_PSNR: {:.4e} mu_PSNR: {:.4e}'.format(
+                    epoch, current_step, avg_psnr, avg_normalized_psnr, avg_tonemapped_psnr))
+                # tensorboard logger
+                if opt['use_tb_logger'] and 'debug' not in opt['name']:
+                    tb_logger.add_scalar('psnr', avg_psnr, current_step)
+                    tb_logger.add_scalar('norm_PSNR', avg_normalized_psnr, current_step)
+                    tb_logger.add_scalar('mu_PSNR', avg_tonemapped_psnr, current_step)
+                    tb_logger.add_scalar('Entropy', avg_Entropy, current_step)
+
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 
             #### save models and training states
             if current_step % opt['logger']['save_checkpoint_freq'] == 0:

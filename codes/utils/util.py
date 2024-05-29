@@ -18,8 +18,11 @@ try:
 except ImportError:
     from yaml import Loader, Dumper
 
+<<<<<<< HEAD
 import skimage.metrics
 
+=======
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 
 def OrderedYaml():
     '''yaml orderedDict support'''
@@ -172,6 +175,7 @@ def save_npy(img, img_path):
     np.save(img_path, img)
 
 
+<<<<<<< HEAD
 # def calculate_psnr(img1, img2):
 #     mse = np.mean((img1 - img2)**2)
 #     if mse == 0:
@@ -183,6 +187,14 @@ def calculate_psnr(img1, img2):
     # psnr = skimage.measure.compare_psnr(img1, img2)
     psnr = skimage.metrics.peak_signal_noise_ratio(img1, img2, data_range=img2.max() - img2.min())
     return psnr
+=======
+def calculate_psnr(img1, img2):
+    mse = np.mean((img1 - img2)**2)
+    if mse == 0:
+        return float('inf')
+    # return 20 * math.log10(255.0 / math.sqrt(mse))
+    return 20 * math.log10(1.0 / math.sqrt(mse))
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 
 def calculate_normalized_psnr(img1, img2, norm):
     normalized_psnr = -10*np.log10(np.mean(np.power(img1/norm - img2/norm, 2)))
@@ -197,6 +209,7 @@ def tanh_norm_mu_tonemap(hdr_image, norm_value, mu=5000):
     bounded_hdr = np.tanh(hdr_image / norm_value)
     return  mu_tonemap(bounded_hdr, mu)
 
+<<<<<<< HEAD
 # def calculate_tonemapped_psnr(res, ref, percentile=99, gamma=2.24):
 #     res = res ** gamma
 #     ref = ref ** gamma
@@ -204,10 +217,13 @@ def tanh_norm_mu_tonemap(hdr_image, norm_value, mu=5000):
 #     tonemapped_psnr = -10*np.log10(np.mean(np.power(tanh_norm_mu_tonemap(ref, norm_perc) - tanh_norm_mu_tonemap(res, norm_perc), 2)))
 #     return tonemapped_psnr
 
+=======
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
 def calculate_tonemapped_psnr(res, ref, percentile=99, gamma=2.24):
     res = res ** gamma
     ref = ref ** gamma
     norm_perc = np.percentile(ref, percentile)
+<<<<<<< HEAD
     img1=mu_tonemap(ref)
     img2=mu_tonemap(res)
     
@@ -215,4 +231,7 @@ def calculate_tonemapped_psnr(res, ref, percentile=99, gamma=2.24):
     
     tonemapped_psnr = skimage.metrics.peak_signal_noise_ratio(img1, img2, data_range=img2.max() - img2.min())
     
+=======
+    tonemapped_psnr = -10*np.log10(np.mean(np.power(tanh_norm_mu_tonemap(ref, norm_perc) - tanh_norm_mu_tonemap(res, norm_perc), 2)))
+>>>>>>> a9f4214f96656ec01266916956474969d63a8ee5
     return tonemapped_psnr
