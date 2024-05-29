@@ -1,0 +1,26 @@
+name: Ours-Gamma
+model: condition
+distortion: sr
+scale: 1
+gpu_ids: [2]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: 000_Valid_SingleFrame_FirstStage
+    mode: LQ_condition
+    dataroot_LQ: /remote-home/share/jiaqi2/HDR/home/jiaqitang/Real_Valset_1024/image_gamma
+    condition: image
+    
+#### network structures
+network_G:
+  which_model_G: EPCE
+  in_nc: 3
+  out_nc: 3
+  nf: 64 
+  act_type: relu 
+  
+#### path
+path:
+  root: ./
+  pretrain_model_G: /remote-home/share/jiaqi2/HDR/home/jiaqitang/Final_Ours/weight/240000_G.pth
+
