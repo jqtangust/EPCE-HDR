@@ -18,7 +18,7 @@ Due to different physical imaging parameters, the tone-mapping functions between
 ## Updates
 
 - ✅ Fix some bugs in codes.
-- ✅ Fix the problem in datasets. Check this Google Cloud link for [DOWNLOAD](https://drive.google.com/file/d/13Cn7tX5bFBxsYZG1Haw5VcqhSxWnNzMW/view?usp=sharing).
+- ✅ Fix the problem in datasets. Check this Google Cloud link for [DOWNLOAD](https://drive.google.com/file/d/1NdFqKwWfJ5vbE9eR4SMiOjpjebRWo45z/view?usp=sharing).
 - ✅ Release Pretrained Model. Check this Google Cloud link for [DOWNLOAD](https://drive.google.com/file/d/1C1w11zE7sB3PGHpMySfz4476hcnNZ7Pe/view?usp=sharing).
 
 ## Getting Started
@@ -38,7 +38,7 @@ https://competitions.codalab.org/competitions/28161#participate-get-data
 ```
 
 - Or download it directly from Drive (Recommend):
-[Google Drive](https://drive.google.com/file/d/13Cn7tX5bFBxsYZG1Haw5VcqhSxWnNzMW/view?usp=sharing). (including code for building dataset)
+[Google Drive](https://drive.google.com/file/d/1NdFqKwWfJ5vbE9eR4SMiOjpjebRWo45z/view?usp=sharing). (including code for building dataset)
 
 ### Environment
 ```
